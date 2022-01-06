@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/tool_bg">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="15dp"
+            android:background="@drawable/layout_bg"
+            android:layout_marginTop="20dp">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:layout_gravity="center">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_pic"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/holder_profile" />
+
+                <ImageView
+                    android:id="@+id/textview"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_alignTop="@+id/profile_pic"
+                    android:background="@drawable/grey_bg"
+                    android:padding="10dp"
+                    android:src="@drawable/camera"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="75dp"
+                    />
+            </RelativeLayout>
+
+            <!--   <androidx.cardview.widget.CardView
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_margin="5dp">-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:text="Name"
+                        style="@style/tvProfile"/>
+
+                    <EditText
+                        android:id="@+id/name"
+                        android:hint="Type your name"
+                        style="@style/etProfile"/>
+
+                    <TextView
+                        style="@style/tvProfile"
+                        android:text="Email" />
+
+                    <EditText
+                        android:id="@+id/email"
+                        android:inputType="textEmailAddress"
+                        android:hint="Enter the email address"
+                        style="@style/etProfile"/>
+
+                    <TextView
+                        style="@style/tvProfile"
+                        android:text="Home Address" />
+
+                    <EditText
+                        android:id="@+id/home_address"
+                        android:inputType="textEmailAddress"
+                        android:hint="Enter the address"
+                        style="@style/etProfile"/>
+
+
+                    <TextView
+                        style="@style/tvProfile"
+                        android:text="Gender" />
+
+                    <Spinner
+                        android:id="@+id/gender"
+                        android:inputType="textEmailAddress"
+                        android:hint="Enter the address"
+                        style="@style/etProfile"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:text="Interest Areas"
+                            style="@style/tvProfile"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/tv_add_interests"
+                            style="@style/tvProfile"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="Add interests+"
+                            android:textColor="#1E8CE4"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:visibility="invisible"/>
+
+                    </LinearLayout>
+                    <EditText
+                        android:id="@+id/interest_areas"
+                        android:inputType="textEmailAddress"
+                        android:hint=""
+                        style="@style/etProfile"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/tvProfile"
+                            android:text="Password"
+                            android:layout_weight="1"/>
+                        <TextView
+                            android:id="@+id/btn_password"
+                            android:text="Change password"
+                            style="@style/tvProfile"
+                            android:gravity="right"
+                            android:textColor="#1E8CE4"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+                            android:layout_weight="1"
+                            android:visibility="invisible"/>
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:inputType="textPassword"
+                        android:hint="Enter the password"
+                        style="@style/etProfile"/>
+                </LinearLayout>
+
+
+
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SAVE"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:id="@+id/btnSave"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:background="@color/orange"
+                    />
+            </LinearLayout>
+
+            <!--
+                        </androidx.cardview.widget.CardView>
+            -->
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</ScrollView>

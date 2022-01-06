@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LaunchActivity"
+    android:background="@color/white"
+    android:id="@+id/llHome">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@drawable/home_bg2"
+        android:id="@+id/appbar_layout"
+        android:elevation="0dp"
+        android:stateListAnimator="@null">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent">
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_gravity="left"
+               android:layout_marginTop="10dp"
+               android:orientation="horizontal">
+
+               <ImageButton
+                   android:id="@+id/menu"
+                   android:layout_width="25dp"
+                   android:layout_height="25dp"
+                   android:adjustViewBounds="true"
+                   android:background="@null"
+                   android:cropToPadding="true"
+                   app:srcCompat="@drawable/menu" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="EMERALD BLE"
+                   android:layout_gravity="center"
+                   android:textColor="@color/white"
+                   android:textSize="18sp"
+                   android:layout_marginLeft="15dp"
+                   android:textStyle="normal"
+                   android:id="@+id/toolbar_title" />
+           </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/tvDeviceStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Device Status: Disconnected"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:layout_marginBottom="15dp"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        android:textSize="16sp">
+
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/llDeviceStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:layout_marginBottom="2dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="BLE Device"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:id="@+id/itemName"
+                />
+            <View
+                android:layout_width="60dp"
+                android:layout_height="1dp"
+                android:layout_gravity="left"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/grey"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Fri,27 Dec 2021 04:37:01 "
+                android:textSize="16sp"
+                android:textStyle="normal"
+                android:id="@+id/itemTime" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rightLayout"
+            android:layout_width="match_parent"
+            android:layout_height="106dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/blueBtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/blue_status"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/redBtn"
+                android:layout_width="50dp"
+                android:layout_height="43dp"
+                android:src="@drawable/red_status"
+                android:visibility="gone"/>
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Disconnected"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/btn_border_bg"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="MAC"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/itemDistance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="0.5m"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <include layout="@layout/content_launch" />
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/fab"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom|end"-->
+        <!--android:layout_margin="@dimen/fab_margin"-->
+        <!--android:visibility="visible"-->
+        <!--app:srcCompat="@android:drawable/ic_dialog_email" />-->
+
+</LinearLayout>

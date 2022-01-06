@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:padding="5dp"
+    android:background="@drawable/listbg"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/left_select"
+        android:id="@+id/leftLayout"
+        android:clickable="true"
+        android:focusable="true"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/deviceImg"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_important_devices_black_48dp" />
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:layout_marginBottom="2dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:background="@drawable/center_bg"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Name of Jewel"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:id="@+id/itemName"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="added on..."
+                android:textSize="9sp"
+                android:textStyle="italic"
+                android:id="@+id/itemTime"
+                />
+
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rightLayout"
+        android:layout_width="0dp"
+        android:layout_height="106dp"
+        android:layout_marginBottom="2dp"
+        android:layout_weight="1"
+        android:background="@drawable/right_select"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/blueBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/blue_status"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/redBtn"
+            android:layout_width="50dp"
+            android:layout_height="43dp"
+            android:src="@drawable/red_status"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Disconnected"
+            android:visibility="visible" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="MAC"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/itemDistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="0.5m"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
